@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon></icon>
+	<name>Run command ...</name>
+	<unique-id>1391443541044100-3</unique-id>
+	<command>xfce4-appfinder --collapsed</command>
+	<description>Launch a program</description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<unique-id>1388590880939619-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Launch terminal emulator here</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon></icon>
+	<name>Open root Thunar here</name>
+	<unique-id>1391443434179984-1</unique-id>
+	<command>pkexec thunar %f</command>
+	<description>Open this folder with administrative rights</description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Find files here</name>
+	<unique-id>1391015829778456-1</unique-id>
+	<command>catfish --path=%f</command>
+	<description>Search current folder</description>
+	<patterns>*</patterns>
+	<directories/>
+	<text-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Compute sha/md5sum</name>
+	<unique-id>1426501025005582-4</unique-id>
+	<command>yad --info --title=&quot;Computed checksums for %n&quot; --text=&quot;$(echo; echo -n &apos;md5:     &apos; `md5sum %n | awk &apos;{print $1}&apos;`; echo; echo &apos;sha256:&apos; `sha256sum %n | awk &apos;{print $1}&apos;`)&quot; --height=280 --center --button=gtk-close | yad --width=350 --height=250 --progress --percentage=&quot;50&quot; --auto-kill --auto-close --title=&quot;Checksum utility&quot; --text=&quot;Calculating checksums for %n&quot;  --center --button=gtk-close</command>
+	<description>Display checksum of ISO</description>
+	<patterns>*.iso;*.ISO</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Check data integrity</name>
+	<unique-id>1426501047462724-5</unique-id>
+	<command>hashType=&quot;$(echo %n | awk -F &quot;.&quot; &apos;{print $NF}&apos; | sed s/sum//)&quot; &amp;&amp; yad --info --title=&quot;$hashType&quot;&quot; sum result&quot; --width=400 --height=200 --center --text=&quot;\n    $(&quot;$hashType&quot;sum -c %f)&quot;&quot;\n&quot; --button=gtk-close  | yad --progress  --percentage=&quot;50&quot; --auto-kill --auto-close --center --title=&quot;Checksum utility&quot; --text=&quot;    Checking &quot;&quot;$hashType&quot;&quot; sum of    \n&quot;&quot;    &quot;&quot;$(echo %n | rev | cut -f2- -d. | rev)&quot;&quot;    &quot;</command>
+	<description>Compare ISO and hash files</description>
+	<patterns>*.md5;*.md5sum;*.sha;*.shasum;*.sha1;*.sha1sum;*.sha224;*.sha224sum;*.sha256;*.sha256sum;*.sha384;*.sha384sum;*.sha512;*.sha512sum</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Make Startup Sound</name>
+	<unique-id>1447629663342880-3</unique-id>
+	<command>echo %f &gt;~/.config/startupsound.conf</command>
+	<description>Make selected Startup Sound</description>
+	<patterns>*</patterns>
+	<audio-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Make Logout Sound</name>
+	<unique-id>1447629663342880-4</unique-id>
+	<command>echo %f &gt;~/.config/logoutsound.conf</command>
+	<description>Make selected Logout Sound</description>
+	<patterns>*</patterns>
+	<audio-files/>
+</action>
+</actions>

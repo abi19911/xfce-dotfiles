@@ -1,0 +1,57 @@
+/*set custom gtk3/css code below */
+
+@import url("whisker-tweak.css");
+
+.window-frame {
+  box-shadow: none;
+  margin: 1px;
+}
+
+/* Custom Panel Settings */
+.tasklist .toggle {
+  border-radius: 2px;
+}
+
+.panel button:checked {
+  /*background-color: rgba(52, 152, 219, 0.2);*/
+  border-radius: 2px;
+}
+
+.panel button {
+  border-radius: 2px;
+}
+
+.xfce4-panel {
+  border-radius: 10px;
+}
+
+.xfce4-panel border {
+  border-radius: 10px;
+}
+
+#XfcePanelWindowHidden {
+  opacity: 0;
+}
+
+/* DISABLED
+
+#whiskermenu-window {
+  border-radius: 5px;
+  background-color: rgba(20, 22, 27, 0.9);
+  color: rgba(20, 22, 27, 0.9);
+}
+
+#whiskermenu-window treeview {
+  background-color: rgba(20, 22, 27, 0.9);
+  color: rgba(20, 22, 27, 0.9);
+}
+
+#whiskermenu-window border {
+  border-radius: 5px;
+}
+
+#whiskermenu-window button {
+  border-radius: 5px;
+}
+
+*/
